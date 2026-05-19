@@ -5,9 +5,9 @@ import torch.optim as optim
 from data_loader import get_dataloaders
 from model import get_model
 
-# ------------------------
+
 # 1. Setup
-# ------------------------
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 data_dir = "../data"
@@ -19,15 +19,15 @@ model = model.to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.fc.parameters(), lr=0.001)
 
-# ------------------------
+
 # 2. Training config
-# ------------------------
+
 num_epochs = 5
 best_val_acc = 0.0
 
-# ------------------------
+
 # 3. Training loop
-# ------------------------
+
 for epoch in range(num_epochs):
 
     # -------- TRAIN --------

@@ -96,7 +96,7 @@ This project demonstrates an end-to-end machine learning pipeline:
 
 git clone https://github.com/sumitjethva712/pneumonia_detection.git
 
-cd pneumonia-detection
+cd pneumonia_detection
 
 pip install -r requirements.txt
 
@@ -130,13 +130,7 @@ Model file (.pth) is not included due to size limits
 
 You can train the model using train.py
 
-🌐 Live Demo
-
-
-
 🚧 Coming soon (deployment in progress)
-
-
 
 🚀 Future Improvements
 
