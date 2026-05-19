@@ -84,6 +84,6 @@ for epoch in range(num_epochs):
     if val_acc > best_val_acc:
         best_val_acc = val_acc
         torch.save(model.state_dict(), "../model/pneumonia_model.pth")
-        print("💾 Best model saved!")
+        print(" Best model saved!")
 
 print("\nTraining complete!")

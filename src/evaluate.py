@@ -1,5 +1,5 @@
 import torch
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import classification_report, confusion_matrix,recall_score
 from data_loader import get_dataloaders
 from model import get_model
 
@@ -27,6 +27,9 @@ with torch.no_grad():
 
 print("\nConfusion Matrix:")
 print(confusion_matrix(all_labels, all_preds))
+
+print("\n Reacall_socre :")
+print(recall_score(all_labels,all_preds))
 
 print("\nClassification Report:")
 print(classification_report(all_labels, all_preds, target_names=["Normal", "Pneumonia"]))
