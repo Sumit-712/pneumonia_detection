@@ -70,7 +70,7 @@ This project demonstrates an end-to-end machine learning pipeline:
 
 |Train Accuracy | \~94% |
 
-| Pneumonia Recall | \~95% |
+| Pneumonia Recall | \~96% |
 
 | False Negatives | 26 |
 
