@@ -13,7 +13,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = models.resnet18(weights=None)
 model.fc = nn.Linear(model.fc.in_features, 2)
 
-model.load_state_dict(torch.load("model/pneumonia_model.pth", map_location=device))
+model.load_state_dict(torch.load("./model/pneumonia_model.pth",map_location=device))
 model = model.to(device)
 model.eval()
 
@@ -41,7 +41,7 @@ if uploaded_file is not None:
     st.image(image, caption="Uploaded X-ray", use_container_width=True)
 
     img = transform(image)
-    img = img.unsqueeze(0).to(device)
+    img = img.unsqueeze(0).to(device) # type: ignore
 
     with torch.no_grad():
         outputs = model(img)
@@ -50,4 +50,4 @@ if uploaded_file is not None:
     classes = ["Normal", "Pneumonia"]
 
     st.subheader("Prediction:")
-    st.success(f"Result: {classes[pred.item()]}")
+    st.success(f"Result: {classes[pred.item()]}") # type: ignore
